@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: demo
+  r2dbc:
+    url: r2dbc:pool:mysql://192.168.251.173:3306/gateway-backend-service
+    username: root
+    password: admin
+    pool:
+      initial-size: 100
+      max-size: 500
+      max-idle-time: 30m
+      validation-query: SELECT 1
